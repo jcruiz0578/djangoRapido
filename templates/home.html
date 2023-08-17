@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Bienvenidos......</h1>
+
+<div id="content-main" class="grid h-screen place-items-center">
+
+    <form method="post" id="rapido_form"  action="/registrar/"> {% csrf_token %}
+        <div>
+            <fieldset class="module aligned ">
+                <div class="form-row field-id">
+                    <div>
+                        <div class="flex-container">
+                            <label class="required" for="id_id">Id:</label>
+                            <input type="number" name="id" class="vIntegerField" required id="id_id">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row field-nombre_establecimiento">
+
+                    <div>
+                        <div class="flex-container">
+                            <label class="required" for="id_nombre_establecimiento">Nombre establecimiento:</label>
+                            <input type="text" name="nombre_establecimiento" class="vTextField" maxlength="150"
+                                   required
+                                   id="id_nombre_establecimiento">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row field-direccion">
+                    <div>
+                        <div class="flex-container">
+                            <label class="required" for="id_direccion">Direccion:</label>
+                            <input type="text" name="direccion" class="vTextField" maxlength="150" required
+                                   id="id_direccion">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row field-cp">
+                    <div>
+                        <div class="flex-container">
+                            <label class="required" for="id_cp">Cp:</label>
+                            <input type="text" name="cp" class="vTextField" maxlength="150" required id="id_cp">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row field-localidad">
+                    <div>
+                        <div class="flex-container">
+                            <label class="required" for="id_localidad">Localidad:</label>
+                            <input type="text" name="localidad" class="vTextField" maxlength="150" required
+                                   id="id_localidad">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row field-provincia">
+                    <div>
+                        <div class="flex-container">
+                            <label class="required" for="id_provincia">Provincia:</label>
+                            <input type="text" name="provincia" class="vTextField" maxlength="150" required
+                                   id="id_provincia">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row field-persona_contacto">
+                    <div>
+                        <div class="flex-container">
+                            <label class="required" for="id_persona_contacto">Persona contacto:</label>
+                            <input type="text" name="persona_contacto" class="vTextField" maxlength="150" required
+                                   id="id_persona_contacto">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row field-telefono_contacto">
+                    <div>
+                        <div class="flex-container">
+                            <label class="required" for="id_telefono_contacto">Telefono contacto:</label>
+                            <input type="text" name="telefono_contacto" class="vTextField" maxlength="150" required
+                                   id="id_telefono_contacto">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row field-email">
+                    <div>
+                        <div class="flex-container">
+                            <label for="id_email">Email:</label>
+                            <input type="text" name="email" class="vTextField" maxlength="150" id="id_email">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row field-sector_actividad">
+                    <div>
+                        <div class="flex-container">
+                            <label class="required" for="id_sector_actividad">Sector actividad:</label>
+                            <input type="text" name="sector_actividad" class="vTextField" maxlength="150" required
+                                   id="id_sector_actividad">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row field-tipo_terminal">
+                    <div>
+                        <div class="flex-container">
+                            <label class="required" for="id_tipo_terminal">Tipo terminal:</label>
+                            <select name="tipo_terminal" required id="id_tipo_terminal">
+                                <option value="N/A" selected>N/A</option>
+                                <option value="CAJERO">CAJERO</option>
+                                <option value="DATAFONO">DATAFONO</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row field-comision">
+                    <div>
+                        <div class="flex-container">
+                            <label class="required" for="id_comision">Comision:</label>
+                            <input type="number" name="comision" class="vIntegerField" required id="id_comision">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row field-retorno">
+                    <div>
+                        <div class="flex-container">
+                            <label class="required" for="id_retorno">Retorno:</label>
+                            <select name="retorno" required id="id_retorno">
+                                <option value="N/A" selected>N/A</option>
+                                <option value="SI">SI</option>
+                                <option value="NO">NO</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row field-fondo_inicial">
+                    <div>
+                        <div class="flex-container">
+                            <label class="required" for="id_fondo_inicial">Fondo inicial:</label>
+                            <input type="number" name="fondo_inicial" class="vIntegerField" required
+                                   id="id_fondo_inicial">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row field-aportacion_fondo">
+                    <div>
+                        <div class="flex-container">
+                            <label class="required" for="id_aportacion_fondo">Aportacion fondo:</label>
+                            <select name="aportacion_fondo" required id="id_aportacion_fondo">
+                                <option value="N/A" selected>N/A</option>
+                                <option value="CLIENTE">CLIENTE</option>
+                                <option value="NOSOTROS">NOSOTROS</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row field-metodo_reposicion">
+                    <div>
+                        <div class="flex-container">
+                            <label class="required" for="id_metodo_reposicion">Metodo reposicion:</label>
+                            <select name="metodo_reposicion" required id="id_metodo_reposicion">
+                                <option value="N/A" selected>N/A</option>
+                                <option value="CLIENTE">CLIENTE</option>
+                                <option value="NOSOTROS">NOSOTROS</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <button type="submit" id="enviar"  class="mt-10  px-6 py-3.5 text-base font-medium text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Guardar</button>
+
+
+        </div>
+    </form>
+
+</div>
+
+{% endblock %}
